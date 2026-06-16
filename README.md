@@ -22,7 +22,7 @@ A Django web application that facilitates collaboration between Drivers and Comp
 - User can submit the contact for any enquiry or report.
 
 
-## 🎓 Technical Stack
+## Technical Stack
 Backend: Python 3.9+, Django
 Data: SQLite
 Library: matplotlib
