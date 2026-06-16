@@ -19,7 +19,7 @@ A Django web application that facilitates collaboration between Drivers and Comp
 ## Usage
 
 - User can track their vehicle and driver training data through graph.
-- User can submit the contact for any enquiry or report.
+- User can submit the contact form for any enquiry or report.
 
 
 ## Technologies
