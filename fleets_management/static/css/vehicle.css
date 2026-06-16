@@ -1,0 +1,262 @@
+/****Form****/
+
+#driver_training, #vehicle_tracking {
+	padding-top: 15px;
+}
+
+#driver_training input, #vehicle_tracking input {
+	width: 100%;
+	height: 31px;
+	float:left;
+	background: #fefefe;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	color: #878787;
+    font: 14px/20px 'Open Sans', sans-serif;
+    border: 1px solid #f0efef;
+    padding: 5px 18px 7px;
+}
+
+
+#driver_training textarea, #vehicle_tracking textarea {
+	width: 100%;
+	height: 221px;
+	background: #fefefe;
+	position: relative;
+	resize:none;
+	overflow: hidden;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	float:left;
+	margin: 0;
+	color: #878787;
+    font: 14px/20px 'Open Sans', sans-serif;
+    border: 1px solid #f0efef;
+    padding: 11px 18px 7px;
+}
+
+#driver_training  .message ._placeholder, #vehicle_tracking  .message ._placeholder {
+	padding-top: 22px;
+}
+
+
+
+#driver_training ._placeholder, #vehicle_tracking ._placeholder {
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	color: #878787;
+    font: 14px/20px 'Open Sans', sans-serif;
+	border: 1px solid transparent;
+    padding: 5px 28px 5px;
+	height: 30px !important;
+	width: 100% !important;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	cursor: text !important;
+	display: block;
+}
+
+#driver_training ._placeholder.hidden, #vehicle_tracking ._placeholder.hidden {
+	display: none;
+}
+
+#driver_training ._placeholder.focused, #vehicle_tracking ._placeholder.focused {
+	opacity: 0.3;
+}
+
+
+#driver_training .message ._placeholder, #vehicle_tracking .message ._placeholder{
+	height: 100% !important;
+}
+#driver_training label, #vehicle_tracking label {
+	position:relative;
+	display: block;
+	min-height: 40px;
+	float: left;
+	width: 170px;
+}
+
+
+#driver_training label+label, #vehicle_tracking label+label {
+	margin-left: 30px;
+}
+
+
+#driver_training label.message, #vehicle_tracking label.message{
+	width: 100%;
+	position: relative;
+	margin-left: 0;
+}
+
+
+
+
+#driver_training .error-message, #driver_training .empty-message, #vehicle_tracking .error-message, #vehicle_tracking .empty-message  {
+	color: #E02A05;
+	font-size: 11px;
+	line-height:14px;
+	width:auto;
+	position: absolute;
+	z-index: 999;
+	bottom: -3px;
+	opacity: 0;
+	right: 5px;
+	float:left;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#driver_training .message .error-message, #driver_training .message .empty-message, #vehicle_tracking .message .error-message, #vehicle_tracking .message .empty-message {
+	bottom: -16px;
+}
+
+
+
+
+#driver_training .invalid .error-message, #driver_training .empty .empty-message, #vehicle_tracking .invalid .error-message, #vehicle_tracking .empty .empty-message {
+	opacity: 1;
+}
+
+.btns {
+	font-size: 0;
+	line-height: 0;
+	text-align: right;
+	padding-top: 28px;
+}
+
+.btns a.btn {
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	min-width: 85px;
+	display: inline-block;
+	text-align: center;
+	
+}
+
+.btns a.btn+a.btn {
+	margin-left: 8px;
+}
+
+
+
+
+
+
+.phone {
+	position: relative;
+}
+
+
+
+.message br {
+	height: 0;
+	line-height: 0;
+}
+
+#driver_training .success-message, #vehicle_tracking .success-message {
+	display: none;
+	opacity: 0;
+	position: absolute;
+	background: #fefefe;
+    border: 1px solid #f0efef;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	padding: 9px 10px;
+	z-index: 999;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#driver_training.success .success-message, #vehicle_tracking.success .success-message {
+	display: block;
+	opacity: 1;
+}
+
+.success_wrapper {
+	position: relative;	
+}
+
+@media only screen and (max-width: 995px) {
+
+#driver_training {
+}
+
+
+#driver_training label, #vehicle_tracking label {
+	float: none !important;	
+	width: 100%;
+	margin-left: 0 !important;
+}
+
+#driver_training input, #vehicle_tracking input {
+	margin-bottom: 10px;
+}
+
+
+#driver_training .success-message, #vehicle_tracking .success-message  {
+	width: 100%;
+}
+
+.btns {
+	padding-right: 0;
+}
+
+#driver_training label.email, #vehicle_tracking label.email  {
+	width: 100%;
+	margin: 0;
+}
+
+.map figure {
+	float: left !important;
+	margin-right: 0px !important;
+}
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+
+.map figure {
+	width: 100% !important;
+	float: none !important;
+	display: block !important;
+	margin-right: 0px !important;
+}
+  .btns {
+		padding-bottom: 0;  
+  }
+  
+  #driver_training textarea, #vehicle_tracking textarea {
+		height: 300px !important; 
+  }
+
+   #driver_training, #vehicle_tracking {
+ 	padding-right: 0;
+ }
+  
+}
+@media only screen and (max-width: 479px) {
+
+  #driver_training textarea, #vehicle_tracking textarea {
+		height: 200px !important;  
+  }
+}

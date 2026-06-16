@@ -1,0 +1,44 @@
+{% load static %} 
+<body class="page1" id="top">
+	<div class="main">
+		<header>
+			<div class="menu_block ">
+				<div class="container_12">
+					<div class="grid_12">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+							  {% if request.path == '/' %}
+								<li class="current"><a href="/">Home</a></li>
+								<li><a href="/about-us">About Us</a></li>
+								<li><a href="/contact-us">Contact Us</a></li>
+							  {% elif request.path == '/about-us' %}
+								<li><a href="/">Home</a></li>
+								<li class="current"><a href="/about-us">About Us</a></li>
+								<li><a href="/contact-us">Contact Us</a></li>
+							  {% elif request.path == '/contact-us' %}
+								<li><a href="/">Home</a></li>
+								<li><a href="/about-us">About Us</a></li>
+								<li class="current"><a href="/contact-us">Contact Us</a></li>
+							   {% else %}
+							    <li><a href="/">Home</a></li>
+								<li><a href="/about-us">About Us</a></li>
+								<li><a href="/contact-us">Contact Us</a></li>
+							   {% endif %}
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="container_12">
+				<div class="grid_12">
+					<h1>
+						<a href="/">
+							<img src="{% static 'images/logo.png' %}" alt="Fleets Management">
+						</a>
+					</h1>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</header>

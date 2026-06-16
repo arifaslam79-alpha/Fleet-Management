@@ -1,0 +1,20 @@
+{% extends "fleets_management/base.html" %}
+{% load static %}  
+{% block title %}Driver Training{% endblock %}
+{% block content %}
+<div class="content">
+	<div class="container_12">
+		<div class="grid_12">
+			<h3>{{ data.iframe_code|safe }}</h3>			
+		</div>
+		<div class="grid_5">
+			{{ data.description|safe }}
+		</div>
+		<div class="grid_6 prefix_1">
+			<h3>Training Graph</h3>
+		    <img src="data:image/png;base64,{{ plot_url }}" alt="Plot">  
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+{% endblock content %}
