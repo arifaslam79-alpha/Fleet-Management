@@ -1,4 +1,4 @@
-# Investors Companies Relationship App
+# Fleet Management App
 
 A Django web application that facilitates collaboration between Drivers and Company Owner(Super User) to manage fleet problem in your area.
 
