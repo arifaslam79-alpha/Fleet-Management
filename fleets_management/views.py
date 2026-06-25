@@ -80,7 +80,7 @@ def vehicle_track(request):
     try:
         vehicletrack_obj = Pages.objects.get(name='vehicle-tracking', status='1');
 
-        vehicletrack_by_date = VehicleTrackRecord.objects.values('vehicle','vehicle_condition').order_by('vehicle_condition')[:5]
+        vehicletrack_by_date = VehicleTrackRecord.objects.values('vehicle','vehicle_condition').order_by('vehicle_condition')
         
         vehicleCond = []
         vehicleName = []

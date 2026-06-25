@@ -5,7 +5,7 @@ A Django web application that facilitates collaboration between Drivers and Comp
 ## Features
 
 - Vehicle Register
-- Vehicle Tracking
+- Vehicle Tracking is based on the vehicle condition i.e. Bad, Below Average, Average and Good submitted by Super user
 - Driver Training
 - Super user profile
 
