@@ -10,10 +10,8 @@ import matplotlib
 matplotlib.use('agg')
 from io import BytesIO  
 import base64  
-import random  
-import string 
-import datetime 
 from django.db.models.functions import TruncDate  
+from django.db.models import Avg
 
 # Create your views here.
 def home(request):
@@ -86,11 +84,12 @@ def vehicle_track(request):
         vehicleName = []
         for item in vehicletrack_by_date: 
             vehicleReg = VehicleRegister.objects.get(pk=item['vehicle'])
-            vehicleName.append(vehicleReg.vehicle_name)
-            vehicleCond.append(item['vehicle_condition'])
-       
-        plt.plot(vehicleName, vehicleCond)  
-        plt.title('X=Vehicle Name, \nY=Vehicle Condition(0=Bad | 1=Below Average | 2=Average | 3=Good)')
+            average_data = VehicleTrackRecord.objects.filter(vehicle=item['vehicle']).aggregate(average_vehicle_condition=Avg('vehicle_condition'))
+            vehicleName.append(vehicleReg.vehicle_number)
+            vehicleCond.append(average_data['average_vehicle_condition'])
+
+        plt.bar(vehicleName, vehicleCond, color='skyblue', width=0.6)  
+        plt.title('X=Vehicle Number, \nY=Vehicle Condition(0=Bad | 1=Below Average | 2=Average | 3=Good)')
         buffer = BytesIO()  
         plt.savefig(buffer, format='png')  
         buffer.seek(0)  
